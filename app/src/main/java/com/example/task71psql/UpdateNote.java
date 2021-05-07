@@ -23,8 +23,8 @@ public class UpdateNote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_note);
 
-        myNoteTitle = findViewById(R.id.addNoteContent);
-        myNoteContent = findViewById(R.id.addNoteTitle);
+        myNoteTitle = findViewById(R.id.addNoteTitle);
+        myNoteContent = findViewById(R.id.addNoteContent);
         btnupdate = findViewById(R.id.update);
         btnDelete = findViewById(R.id.delete);
 
