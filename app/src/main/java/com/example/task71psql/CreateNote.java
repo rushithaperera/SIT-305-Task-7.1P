@@ -20,8 +20,8 @@ public class CreateNote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_note);
 
-        myNoteTitle = findViewById(R.id.addNoteContent);
-        myNoteContent = findViewById(R.id.addNoteTitle);
+        myNoteTitle = findViewById(R.id.addNoteTitle);
+        myNoteContent = findViewById(R.id.addNoteContent);
         btnsave = findViewById(R.id.save);
 
         btnsave.setOnClickListener(new View.OnClickListener() {

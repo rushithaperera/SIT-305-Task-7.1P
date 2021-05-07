@@ -7,9 +7,9 @@ public class Model {
     String id;
 
     public Model(String id, String title, String description) {
+        this.id = id;
         this.title = title;
         this.description = description;
-        this.id = id;
     }
 
     public String getTitle() {
