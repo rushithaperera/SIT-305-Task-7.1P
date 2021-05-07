@@ -77,4 +77,32 @@ public class DatabaseClass extends SQLiteOpenHelper {
         return cursor;
 
     }
+
+    void updateNotes(String title, String description, String id){
+        SQLiteDatabase database = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(ColumnTitle, title);
+        cv.put(ColumnDescription,description);
+
+        long result = database.update(TableName, cv, "id=?", new String[]{id});
+        if(result == -1){
+            Toast.makeText(context,"Update Failed", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(context,"Note Updated", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    void deleteNote(String id){
+        SQLiteDatabase database = this.getWritableDatabase();
+
+        long result = database.delete(TableName,"id=?", new String[]{id});
+        if(result == -1){
+            Toast.makeText(context,"Delete Failed", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(context,"Note Deleted", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

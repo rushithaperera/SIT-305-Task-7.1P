@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateNote">
+
+  <EditText
+      android:id="@+id/addNoteTitle"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:ems="10"
+      android:gravity="start|top"
+      android:inputType="textMultiLine"
+      android:background="@drawable/edit_text_border"
+      app:layout_constraintStart_toStartOf="@id/editTextLeft"
+      app:layout_constraintEnd_toEndOf="@id/editTextRight"
+      app:layout_constraintTop_toBottomOf="@id/noteHeadingTop"
+      app:layout_constraintBottom_toTopOf="@id/noteHeadingBot"/>
+
+  <EditText
+      android:id="@+id/addNoteContent"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:ems="10"
+      android:gravity="start|top"
+      android:inputType="textMultiLine"
+      android:background="@drawable/edit_text_border"
+      app:layout_constraintStart_toStartOf="@id/editTextLeft"
+      app:layout_constraintEnd_toEndOf="@id/editTextRight"
+      app:layout_constraintTop_toBottomOf="@id/editTextTop"
+      app:layout_constraintBottom_toTopOf="@id/editTextBot"/>
+
+
+  <Button
+      android:id="@+id/update"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:text="Update"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="@id/saveBtnLeft"
+      app:layout_constraintEnd_toEndOf="@id/saveBtnRight"
+      app:layout_constraintTop_toBottomOf="@id/saveBtnTop"
+      app:layout_constraintBottom_toTopOf="@id/saveBtnBot"/>
+
+  <Button
+      android:id="@+id/delete"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:text="Delete"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="@id/deleteBtnLeft"
+      app:layout_constraintEnd_toEndOf="@id/deleteBtnRight"
+      app:layout_constraintTop_toBottomOf="@id/saveBtnTop"
+      app:layout_constraintBottom_toTopOf="@id/saveBtnBot"/>
+
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/noteHeadingTop"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.05"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/noteHeadingBot"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.13"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/editTextTop"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.15"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/editTextBot"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.7"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/editTextLeft"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.05"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/editTextRight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.95"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/saveBtnTop"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.75"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/saveBtnBot"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.85"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/saveBtnLeft"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.05"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/saveBtnRight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.45"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/deleteBtnLeft"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.55"/>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/deleteBtnRight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.95"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

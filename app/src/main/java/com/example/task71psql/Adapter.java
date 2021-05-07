@@ -2,6 +2,7 @@ package com.example.task71psql;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         holder.title.setText(noteList.get(position).getTitle());
         holder.description.setText(noteList.get(position).getDescription());
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, UpdateNote.class);
+
+                intent.putExtra("title", noteList.get(position).getTitle());
+                intent.putExtra("description", noteList.get(position).getDescription());
+                intent.putExtra("id", noteList.get(position).getId());
+
+                activity.startActivity(intent);
+
+            }
+        });
 
     }
 
